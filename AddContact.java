@@ -183,7 +183,7 @@ public class AddContact implements ActionListener{
                         System.out.println("Email: " + email.getText());
                         // JOptionPane.showMessageDialog(null, "Contact added successfully", "Contact Added", JOptionPane.INFORMATION_MESSAGE);
                         int res = JOptionPane.showConfirmDialog(null, "Contact added successfully\nDo you want to add more contacts?", "Contact Added", JOptionPane.YES_NO_OPTION);
-                        if (res == 0) {           // ---- if YES - 0
+                        if(res == 0) {           // ---- if YES - 0
                             frame.dispose();
                             new AddContact();
                         } else {                       // ----- if NO - 1
