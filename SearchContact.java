@@ -176,6 +176,7 @@ public class SearchContact implements ActionListener{
 
     public void actionPerformed(ActionEvent ae){
         // ----------- if "backButton" is clicked -----------
+        name.setEditable(false);
         if(ae.getSource() == backButton){
             frame.dispose();
         }
@@ -187,7 +188,6 @@ public class SearchContact implements ActionListener{
                 JOptionPane.showMessageDialog(frame, "Name/Mobile cannot be empty");
             } else {
                 nameToSearch = name.getText();       // --- Retrieving text from text field
-                name.setEditable(false);
                 findRecordsFromDB(nameToSearch);     // Showing buttons with contact name (INSIDE FUNCTION)
                 setNameButtonProperties(numberOfButtons);
                 addNameButtonsToPanel(numberOfButtons);
