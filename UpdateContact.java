@@ -171,7 +171,7 @@ public class UpdateContact implements ActionListener{
         // check if email contains "@"
         // check if contains "." (dot)
         // check if it contains any spaces (invalid)
-        return (inputEmail.contains("@") && inputEmail.contains(".") && (!(inputEmail.contains(" "))));
+        return (inputEmail.length() > 2 && inputEmail.contains("@") && inputEmail.contains(".") && (!(inputEmail.contains(" "))));
     }
 
     public void actionPerformed(ActionEvent ae) {
